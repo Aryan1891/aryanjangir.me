@@ -3,7 +3,10 @@ import Head from "next/head";
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import About from "../../components/About";
-export default function Home() {
+import Skills from "../../components/Skills";
+import Projects from "../../components/Projects";
+
+module.exports = function Home() {
   return (
     <div 
     className="bg-[rgb(36,36,36)] text-white h-screen snap-y  snap-mandatory overflow-scroll z-0">
@@ -24,7 +27,19 @@ export default function Home() {
         <About/>
       </section>
 
-      
+      {/* skills */}
+      <section id="skills" className="snap-start">
+        <Skills/>
+      </section>
+     {/* projects */}
+     <section id="projects" className="snap-start">
+        <Projects/>
+      </section>
+      {/* contact */}
+     <section id="contact" className="snap-end">
+        <Contact/>
+      </section> 
+       
     </div>
   )
 }
